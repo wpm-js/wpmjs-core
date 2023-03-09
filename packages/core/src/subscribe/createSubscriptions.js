@@ -15,22 +15,8 @@ export const createObserve = (store, props) => {
             fnKey
           ]?.call(store, value.data, props)
         }
-        if (store?.subscriber?.[targetMeta.baseSymbol]?.[subjectKey]?.[fnKey]) {
-          combination.$record({
-            ...value,
-            type: 'observer',
-            source:
-              store?.subscriber?.[targetMeta.baseSymbol]?.[subjectKey]?.[fnKey],
-          })
-        }
       }
-      if (subjectKey === 'state') {
-        setTimeout(() => {
-          handle()
-        }, 16)
-      } else {
-        handle()
-      }
+      handle()
     },
   }
 }
@@ -101,18 +87,6 @@ export function createSubscriptions(store) {
               value.pending
             )
           }
-
-          combination.$record({
-            ...value,
-            source: store.exports?.[value?.fnKey],
-            targetMeta: {
-              baseSymbol: store.baseSymbol,
-            },
-            eventTargetMeta: {
-              fnKey: value.fnKey,
-              subjectKey: 'exec',
-            },
-          })
         }
       },
     })

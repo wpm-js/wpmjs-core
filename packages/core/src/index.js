@@ -1,24 +1,21 @@
-export { createSubscriptions } from './subscribe/createSubscriptions'
-export { invoke } from './subscribe/invoke'
-export { create } from './store/create'
-export {
-  createMembrane,
-  registerMembrane,
-  getRegisterMembrane,
-} from './store/createMembrane'
-export { Store } from './store/Store'
-export { compose, createCompose } from './store/compose'
+import { inject } from './inject'
+import { create } from './store/create'
 
-export {
-  enhanceContext,
-  combination,
-  extendsSubscribe,
-  readState,
-  namelist,
-  configModuleLoader,
-  registerModule,
-  addPlugin,
-} from './store/combination'
-
-export { mock } from './mock'
-import './subscribe/task'
+class WPMJS {
+  constructor(config) {
+    this.config = config
+  }
+  loadJS(url) {
+    const script = document.createElement('script')
+    script.src = url
+    document.head.appendChild(script)
+  }
+  import(moduleName) {
+    //TODO Get the cdn address of the package corresponding to scope/name
+    //need wpm-js service supporting
+    //like loadModule(moduleName)
+    return inject(moduleName)
+  }
+  export() {}
+}
+export default new WPMJS({})

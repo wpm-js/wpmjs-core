@@ -1,21 +1,17 @@
 {
-  "name": "rdeco",
-  "version": "1.0.0",
-  "description": "基于响应式的应用开发框架",
+  "name": "@wpm-js/main",
+  "version": "0.1.0",
+  "description": "",
   "private": true,
   "keywords": [
-    "react",
-    "flux",
-    "hook",
-    "state",
-    "useReducer",
+    "module",
     "rxjs"
   ],
   "licenses": "MIT",
-  "author": "shihong <112365362@qq.com>",
+  "author": "<112365362@qq.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kinop112365362/rdeco"
+    "url": "https://github.com/wpm-js"
   },
   "types": "./types",
   "main": "./lib/index.js",
@@ -42,9 +38,6 @@
   "peerDependencies": {
     "@babel/runtime": "^7.12.1",
     "react": "^16.8.3 || ^17",
-    "router5": "^8.0.1",
-    "router5-plugin-browser": "^8.0.1",
-    "router5-plugin-logger": "^8.0.1",
     "rxjs": "^7.4.0"
   },
   "devDependencies": {
@@ -74,6 +67,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "eslint-plugin-proxy": "latest",
     "codecov": "^3.8.0",
     "commander": "^8.2.0",
     "create-react-class": "^15.7.0",
@@ -92,12 +86,9 @@
     "react-dom": "^16.14.0",
     "react-test-renderer": "^16.14.0",
     "rimraf": "^3.0.2",
-    "router5": "^8.0.1",
-    "router5-plugin-browser": "^8.0.1",
-    "router5-plugin-logger": "^8.0.1",
     "rxjs": "^7.4.0",
     "shelljs": "^0.8.4",
     "typescript": "^4.2.3",
-    "lodash.isplainobject":"^4.0.6"
+    "lodash.isplainobject": "^4.0.6"
   }
 }

@@ -1,13 +1,9 @@
 {
-  "name": "@rdeco/core",
-  "version": "3.30.8",
-  "description": "基于响应式的应用开发框架",
+  "name": "@wpm-js/core",
+  "version": "0.1.0",
+  "description": "wpm-js core api",
   "keywords": [
-    "react",
-    "flux",
-    "hook",
-    "state",
-    "useReducer",
+    "module",
     "rxjs"
   ],
   "types": "./types",
@@ -18,8 +14,8 @@
     "lib",
     "es"
   ],
-  "repository": "https://github.com/kinop112365362/rdeco",
-  "author": "shihong <112365362@qq.com>",
+  "repository": "https://github.com/wpm-js/wpmjs-core.git",
+  "author": "<jacky112363562@gmail.com>",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
