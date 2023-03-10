@@ -10,12 +10,23 @@ class WPMJS {
     script.src = url
     document.head.appendChild(script)
   }
-  import(moduleName) {
+  async import(moduleName) {
     //TODO Get the cdn address of the package corresponding to scope/name
     //need wpm-js service supporting
     //like loadModule(moduleName)
-    return inject(moduleName)
+    const defaultModule = await inject(moduleName).default()
+    return defaultModule
   }
-  export() {}
+  export(moduleName, module) {
+    const moduleWrapper = create({
+      name: moduleName,
+      exports: {
+        default(resolve) {
+          resolve(module)
+        },
+      },
+    })
+    return moduleWrapper
+  }
 }
 export default new WPMJS({})

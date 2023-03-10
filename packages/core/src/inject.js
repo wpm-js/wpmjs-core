@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import { invoke, mock } from './index'
+import { invoke } from './invoke'
+import { mock } from './mock'
 // This function is used to create a proxy object that intercepts function calls made on it.
 // It takes in a moduleName parameter and returns a new proxy object.
 

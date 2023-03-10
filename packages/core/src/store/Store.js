@@ -3,7 +3,7 @@
 /* eslint-disable valid-jsdoc */
 /* eslint-disable react/display-name */
 import { combination } from './combination'
-import { invoke } from '../subscribe/invoke'
+import { invoke } from '../invoke'
 
 export class Store {
   constructor(storeConfig) {

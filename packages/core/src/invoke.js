@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { AsyncSubject } from 'rxjs'
-import { combination } from '../store/combination'
+import { combination } from './store/combination'
 const inform = (targetMeta, fnKey, data, next, error, pending) => {
   if (!Array.isArray(targetMeta)) {
     throw new Error(`${targetMeta} 不是一个数组`)

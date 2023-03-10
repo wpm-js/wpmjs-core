@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import { BehaviorSubject } from 'rxjs'
+import { BehaviorSubject, ReplaySubject } from 'rxjs'
 import packageJSON from '../../package.json'
 
 let combination = {
@@ -7,7 +6,9 @@ let combination = {
   components: {},
   notificationSubjects: {},
   registerSubject: new BehaviorSubject(null),
+  // eslint-disable-next-line no-undef
   namelist: new Set(),
+  // eslint-disable-next-line no-undef
   observableList: new Set(),
   subjects: {
     deps: {},
@@ -64,7 +65,7 @@ let combination = {
       }
     )
     if (this.components[baseSymbol].length > rawLength) {
-      throw new Error(`${baseSymbol} 组件卸载异常`)
+      throw new Error(`${baseSymbol} component uninstall error`)
     }
     const rawTargetsLength = this.subjects.targets[baseSymbol]
     this.subjects.targets[baseSymbol] = this.subjects.targets[
@@ -73,7 +74,7 @@ let combination = {
       return target.symbol !== symbol
     })
     if (this.subjects.targets[baseSymbol].length > rawTargetsLength) {
-      throw new Error(`${baseSymbol} 组件监听器卸载异常`)
+      throw new Error(`${baseSymbol} component listener uninstall error`)
     }
     const rawTargetsQueueLength = this.subjects.targetsProxyQueue[baseSymbol]
     this.subjects.targetsProxyQueue[baseSymbol] =
@@ -83,7 +84,7 @@ let combination = {
     if (
       this.subjects.targetsProxyQueue[baseSymbol].length > rawTargetsQueueLength
     ) {
-      throw new Error(`${baseSymbol} 组件监听器卸载异常`)
+      throw new Error(`${baseSymbol} component listener uninstall error`)
     }
     if (this.subjects.targetsProxyQueue[baseSymbol].length === 0) {
       this.subjects.targetsProxy[baseSymbol].next(null)
@@ -107,10 +108,10 @@ let combination = {
         // eslint-disable-next-line no-undef
         this.subjects.deps[baseSymbol] = new Set()
       }
-      Object.keys(subscriber).forEach((observeTagetKey) => {
-        this.subjects.deps[baseSymbol].add(observeTagetKey)
-        this.observableList.add(observeTagetKey)
-        this.$initTargetProxy(observeTagetKey)
+      Object.keys(subscriber).forEach((observeTargetKey) => {
+        this.subjects.deps[baseSymbol].add(observeTargetKey)
+        this.observableList.add(observeTargetKey)
+        this.$initTargetProxy(observeTargetKey)
       })
     }
     return null
