@@ -2,6 +2,7 @@
   "name": "@wpm-js/runtime",
   "version": "0.1.0",
   "description": "As a base runtime for core's api",
+  "private":true,
   "keywords": [
     "wpm-js"
   ],
