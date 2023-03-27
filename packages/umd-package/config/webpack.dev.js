@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.umd.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: `${npmPackageJson.name}-${npmPackageJson.version}.development.js`,
+    filename: `wpm-js-runtime-${npmPackageJson.version}.development.js`,
   },
   devtool: 'eval-source-map',
   externals: {
