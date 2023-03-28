@@ -1,12 +1,11 @@
 const path = require('path')
-const npmPackageJson = require('../package.json')
 
 module.exports = {
   mode: 'development',
   entry: './src/index.umd.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: `wpm-js-runtime-${npmPackageJson.version}.development.js`,
+    filename: `wpmjs.development.js`,
   },
   devtool: 'eval-source-map',
   externals: {

@@ -1,12 +1,11 @@
 const path = require('path')
-const npmPackageJson = require('../package.json')
 
 module.exports = {
   mode: 'production',
   entry: './src/index.umd.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: `wpm-js-runtime-${npmPackageJson.version}.production.js`,
+    filename: `wpmjs.production.js`,
   },
   externals: {
     react: 'React',
