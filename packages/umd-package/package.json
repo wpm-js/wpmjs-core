@@ -1,6 +1,6 @@
 {
   "name": "@wpm-js/runtime",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "As a base runtime for core's api",
   "keywords": [
     "wpm-js"
