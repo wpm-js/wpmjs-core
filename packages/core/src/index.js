@@ -29,4 +29,5 @@ class WPMJS {
     return moduleWrapper
   }
 }
+export { inject }
 export default new WPMJS({})
