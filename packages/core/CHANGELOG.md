@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.3.0...@wpm-js/core@0.3.1) (2023-04-02)
+
+
+### Bug Fixes
+
+* **error:** pending is none ([c90588b](https://github.com/wpm-js/wpmjs-core/commit/c90588ba9599cec51c4370bce5485d622a4abffc))
+
+
+
+
+
 # [0.3.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.2.0...@wpm-js/core@0.3.0) (2023-04-02)
 
 
