@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.2.0...@wpm-js/core@0.3.0) (2023-04-02)
+
+
+### Features
+
+* **export:** add new api for export ([b5ed046](https://github.com/wpm-js/wpmjs-core/commit/b5ed0467fbeddb962badabb317f997356b09313f))
+
+
+
+
+
 # 0.2.0 (2023-03-13)
 
 
