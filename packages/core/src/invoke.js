@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { AsyncSubject } from 'rxjs'
 import { combination } from './store/combination'
-const inform = (targetMeta, fnKey, data, next, error, pending) => {
+const inform = (targetMeta, fnKey, data, next, error) => {
   if (!Array.isArray(targetMeta)) {
     throw new Error(`${targetMeta} 不是一个数组`)
   }
@@ -12,7 +12,6 @@ const inform = (targetMeta, fnKey, data, next, error, pending) => {
       data,
       next,
       error,
-      pending,
       finder,
     })
   } else {
@@ -21,7 +20,6 @@ const inform = (targetMeta, fnKey, data, next, error, pending) => {
       data,
       next,
       error,
-      pending,
       finder,
     })
   }
@@ -35,7 +33,7 @@ export const invoke = (...args) => {
   const error = (err) => {
     syncker.error(err)
   }
-  inform(...args, next, error, pending)
+  inform(...args, next, error)
   const promise = new Promise((resolve, reject) => {
     syncker.subscribe({
       next(value) {
