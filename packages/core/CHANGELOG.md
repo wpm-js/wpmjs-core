@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.4.0...@wpm-js/core@0.5.0) (2023-04-07)
+
+
+### Features
+
+* **cross:** 借助 window 变量跨模块调用 ([057494d](https://github.com/wpm-js/wpmjs-core/commit/057494d1a4d3a250a9262423494025e3acb79191))
+
+
+
+
+
 # [0.4.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.3.1...@wpm-js/core@0.4.0) (2023-04-02)
 
 
