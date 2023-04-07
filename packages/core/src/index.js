@@ -15,7 +15,7 @@ class WPMJS {
     //need wpm-js service supporting
     //like loadModule(moduleName)
     const defaultModule = await inject(moduleName).default()
-    return defaultModule
+    return { default: defaultModule }
   }
   export(moduleName, module) {
     const moduleWrapper = create({

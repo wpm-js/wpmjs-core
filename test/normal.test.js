@@ -22,7 +22,7 @@ wpm.export('@test/module', {
 
 test('Through wpm.export a wpm module, then use wpm.import getting this module and call some api on it', async () => {
   // transformed import testModule from '@test/module'
-  const testModule = await wpm.import('@test/module')
+  const testModule = await wpm.import('@test/module').default
   const result = testModule.sum(1, 2)
   console.debug(result)
   expect(result).toBe(3)
