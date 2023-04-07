@@ -137,5 +137,11 @@ let combination = {
     }
   },
 }
-
+if (window) {
+  if (window.wpm_combination) {
+    combination = window.wpm_combination
+  } else {
+    window.wpm_combination = combination
+  }
+}
 export { combination }
