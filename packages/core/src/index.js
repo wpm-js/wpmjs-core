@@ -10,6 +10,23 @@ class WPMJS {
     script.src = url
     document.head.appendChild(script)
   }
+  loadCSS(url) {
+    const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.type = 'text/css'
+    link.href = url
+    document.head.appendChild(link)
+  }
+  load(urlArr) {
+    urlArr.forEach((url) => {
+      if (/\.js$/.test(url)) {
+        this.loadJS(url)
+      } else if (/\.css$/.test(url)) {
+        this.loadCSS(url)
+        // 这是 CSS 文件
+      }
+    })
+  }
   async import(moduleName) {
     //TODO Get the cdn address of the package corresponding to scope/name
     //need wpm-js service supporting
