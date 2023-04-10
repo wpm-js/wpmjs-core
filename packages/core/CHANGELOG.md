@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.6.0...@wpm-js/core@0.6.1) (2023-04-10)
+
+
+### Bug Fixes
+
+* **test:** change test case ([fa0bd39](https://github.com/wpm-js/wpmjs-core/commit/fa0bd39bd9def2b1904d506fb26cf12dfbedc479))
+
+
+
+
+
 # [0.6.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.5.0...@wpm-js/core@0.6.0) (2023-04-10)
 
 
