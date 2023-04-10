@@ -20,6 +20,7 @@ class WPMJS {
   load(urlArr) {
     urlArr.forEach((url) => {
       if (/\.js$/.test(url)) {
+        // 这是 JS 文件
         this.loadJS(url)
       } else if (/\.css$/.test(url)) {
         this.loadCSS(url)
