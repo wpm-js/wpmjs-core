@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.5.0...@wpm-js/core@0.6.0) (2023-04-10)
+
+
+### Features
+
+* **load:** add load api for assets ([e1a94bb](https://github.com/wpm-js/wpmjs-core/commit/e1a94bb78689a01d65ee664838db5e02ef8384dc))
+
+
+
+
+
 # [0.5.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.4.0...@wpm-js/core@0.5.0) (2023-04-07)
 
 
