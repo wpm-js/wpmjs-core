@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.6.1...@wpm-js/core@0.6.2) (2023-04-10)
+
+
+### Bug Fixes
+
+* **import:** import not change module structure ([a575808](https://github.com/wpm-js/wpmjs-core/commit/a575808c2a903b767c40a3f1ba588ab8602a0076))
+
+
+
+
+
 ## [0.6.1](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.6.0...@wpm-js/core@0.6.1) (2023-04-10)
 
 
