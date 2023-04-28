@@ -29,7 +29,7 @@
     "build": "yarn workspaces run build",
     "ver": "lerna version",
     "pub": "git pull && yarn build && yarn link:lerna && yarn test && lerna publish",
-    "pub:lerna": "lerna publish from-package",
+    "pub:lerna": "lerna publish from-git",
     "link:lerna": "lerna link --force-local",
     "format": "prettier --write \"{src,test}/**/*.{js,ts}\" index.d.ts \"docs/**/*.md\"",
     "lint": "eslint packages/**/src --fix",
