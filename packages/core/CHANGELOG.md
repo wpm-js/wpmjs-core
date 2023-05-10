@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.6.2...@wpm-js/core@0.6.3) (2023-05-10)
+
+
+### Bug Fixes
+
+* **bug:** create return have no dispose ([b36bd67](https://github.com/wpm-js/wpmjs-core/commit/b36bd67937191be745d4fe471dad6e1f0b32a3c1))
+
+
+
+
+
 ## [0.6.2](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.6.1...@wpm-js/core@0.6.2) (2023-04-10)
 
 
