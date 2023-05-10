@@ -19,6 +19,7 @@ function create(entity) {
       rawDispose.call(entityStore) // Call the original dispose method of the entity object
       selfSubscription?.unsubscribe() // Unsubscribe the entity object
     }
+    combination.components[symbol].dispose = entityStore.dispose
     return entityStore // Return the newly created Store object for the entity
   }
   return combination.components[symbol] // Return the entity object in the combination module with this name as the key
