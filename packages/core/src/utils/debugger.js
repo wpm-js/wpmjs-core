@@ -11,16 +11,13 @@ const logStyle_3 =
 
 export function debugLogger(moduleName, functionKey, args, result) {
   if (!window._wpm_debugger_filters(moduleName, functionKey, args, result)) {
+    console.debug('%c 请求::=> ', logStyle_1)
     console.debug(
-      '%c 请求::=>',
-      logStyle_1,
-      `%c 模块名/方法::=> ${moduleName}/${functionKey}`,
+      `%c 模块名/方法:: ${moduleName}/${functionKey} => 参数::=>`,
       logStyle_2,
-      '%c 参数::=>',
-      logStyle_3,
       args
     )
-    result && console.debug('响应::=>', result)
+    result && console.debug('%c 响应::=>', logStyle_3, result)
     console.debug('<-------------------->')
   }
 }
