@@ -25,11 +25,7 @@ export function inject(moduleName) {
                 return mock[moduleName][property](...argumentsList)
               } else {
                 // If there is no mock function, log the module name, property name and arguments
-                try {
-                  debugLogger(moduleName, property, argumentsList, false)
-                } catch (error) {
-                  console.error(error)
-                }
+                debugLogger(moduleName, property, argumentsList, false)
                 // Invoke the function using the WPM API
                 return invoke([moduleName], property, ...argumentsList)
               }

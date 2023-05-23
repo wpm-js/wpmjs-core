@@ -28,11 +28,7 @@ const inform = (targetMeta, fnKey, data, next, error) => {
 export const invoke = (...args) => {
   const syncker = new AsyncSubject(null)
   const next = (value) => {
-    try {
-      debugLogger(args[0][0], args[1], args[2], value)
-    } catch (error) {
-      console.error(error)
-    }
+    debugLogger(args[0][0], args[1], args[2], value)
     syncker.next(value)
     syncker.complete()
   }
