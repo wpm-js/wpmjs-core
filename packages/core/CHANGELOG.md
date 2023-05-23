@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.10.0...@wpm-js/core@0.11.0) (2023-05-23)
+
+
+### Features
+
+* **debug:** 增强调试能力 ([a28222e](https://github.com/wpm-js/wpmjs-core/commit/a28222e5026ce10db1e0629f046af3d9a325baf0))
+
+
+
+
+
 # [0.10.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.9.0...@wpm-js/core@0.10.0) (2023-05-23)
 
 
