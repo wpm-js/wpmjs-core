@@ -13,12 +13,12 @@ export function debugLogger(moduleName, functionKey, args, result) {
   if (!window._wpm_debugger_filters(moduleName, functionKey, args, result)) {
     console.debug(
       '%c 请求::=>',
-      `%c 模块名/方法::=> ${moduleName}/${functionKey}`,
-      '%c 参数::=>',
-      args,
       logStyle_1,
+      `%c 模块名/方法::=> ${moduleName}/${functionKey}`,
       logStyle_2,
-      logStyle_3
+      '%c 参数::=>',
+      logStyle_3,
+      args
     )
     result && console.debug('响应::=>', result)
     console.debug('<-------------------->')
