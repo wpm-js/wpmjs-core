@@ -11,9 +11,10 @@ export function debugLogger(moduleName, functionKey, args, result) {
   if (!window._wpm_debugger_filters(moduleName, functionKey, args, result)) {
     console.debug(
       `%c 请求::=> ${moduleName}/${functionKey} 参数::`,
-      logStyle_1
-    ),
+      logStyle_1,
       args
+    )
+
     result && console.debug('%c 响应::=>', logStyle_3, result)
     console.debug('<-------------------->')
   }
