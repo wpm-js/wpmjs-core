@@ -1,6 +1,6 @@
 {
   "name": "@wpm-js/runtime",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "As a base runtime for core's api",
   "keywords": [
     "wpm-js"
@@ -35,7 +35,7 @@
     "@babel/runtime": "^7.12.1"
   },
   "dependencies": {
-    "@wpm-js/core": "0.6.3",
+    "@wpm-js/core": "0.7.0",
     "lodash.throttle": "^4.1.1"
   },
   "devDependencies": {
