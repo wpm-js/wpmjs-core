@@ -24,8 +24,11 @@ export function inject(moduleName) {
                 return mock[moduleName][property](...argumentsList)
               } else {
                 // If there is no mock function, log the module name, property name and arguments
-                console.debug(moduleName, property, argumentsList)
-
+                console.debug('request::=>', {
+                  模块名: moduleName,
+                  调用方法: property,
+                  参数列表: argumentsList,
+                })
                 // Invoke the function using the WPM API
                 return invoke([moduleName], property, ...argumentsList)
               }

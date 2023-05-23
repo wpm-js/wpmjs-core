@@ -27,6 +27,12 @@ const inform = (targetMeta, fnKey, data, next, error) => {
 export const invoke = (...args) => {
   const syncker = new AsyncSubject(null)
   const next = (value) => {
+    console.debug('response::=>', {
+      模块名: args[0],
+      调用方法: args[1],
+      参数列表: args[2],
+      返回值: value,
+    })
     syncker.next(value)
     syncker.complete()
   }
