@@ -1,5 +1,5 @@
 window._wpm_debugger_filters = () => {
-  return true
+  return false
 }
 
 const logStyle_1 =
