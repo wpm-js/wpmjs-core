@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.17](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/runtime@0.2.16...@wpm-js/runtime@0.2.17) (2023-05-26)
+
+**Note:** Version bump only for package @wpm-js/runtime
+
+
+
+
+
 ## [0.2.16](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/runtime@0.2.15...@wpm-js/runtime@0.2.16) (2023-05-26)
 
 **Note:** Version bump only for package @wpm-js/runtime
