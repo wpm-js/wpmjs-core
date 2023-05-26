@@ -1,15 +1,6 @@
 window._wpm_debugger_filters = () => {
   return false
 }
-
-let wpmLoggerStore = null
-
-if (window.localforage) {
-  wpmLoggerStore = window.localforage.createInstance({
-    name: 'wpmLoggerStore',
-  })
-}
-
 const logStyle_1 =
   'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff'
 const logStyle_3 =
