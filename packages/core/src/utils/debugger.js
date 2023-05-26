@@ -74,11 +74,3 @@ export function debugLogger(moduleName, functionKey, args, result) {
     }
   }
 }
-
-debugLogger('appStore', 'setCurrentAppId', [])
-debugLogger('StepController', 'getCurrentStep', [])
-debugLogger('StepController', 'getCurrentStep', [], [])
-debugLogger('appStore', 'setCurrentAppId', [], [])
-debugLogger('LayoutController', 'getCurrentLayout', [])
-debugLogger('LayoutEditorPanel', 'updateModel', [])
-debugLogger('LayoutController', 'getCurrentLayout', [], [])
