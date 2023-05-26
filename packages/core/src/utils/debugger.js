@@ -17,37 +17,19 @@ const logStyle_3 =
 
 export function debugLogger(moduleName, functionKey, args, result) {
   if (!window._wpm_debugger_filters(moduleName, functionKey, args, result)) {
-    if (wpmLoggerStore) {
-      let key = `${moduleName}.${functionKey}`
-      if (result) {
-        key = `response => ${moduleName}.${functionKey}`
-      }
-      wpmLoggerStore.setItem(key, {
-        request: {
-          moduleName,
-          functionKey,
-          args,
-        },
-        response: {
-          result: result ? result : null,
-        },
-        time: new Date().toLocaleString(),
-      })
+    if (!result) {
+      console.debug(
+        `%c 请求::=> ${moduleName}.${functionKey} 参数::`,
+        logStyle_1,
+        args
+      )
     } else {
-      if (!result) {
-        console.debug(
-          `%c 请求::=> ${moduleName}.${functionKey} 参数::`,
-          logStyle_1,
-          args
-        )
-      } else {
-        console.debug(
-          `%c 响应::=> ${moduleName}.${functionKey} 参数::`,
-          logStyle_3,
-          args,
-          result
-        )
-      }
+      console.debug(
+        `%c 响应::=> ${moduleName}.${functionKey} 参数::`,
+        logStyle_3,
+        args,
+        result
+      )
     }
   }
 }
