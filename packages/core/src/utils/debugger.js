@@ -11,7 +11,7 @@ const logStyle_end =
 window._wpm_debugger_logStore = []
 let cacheLogQueue = []
 export function debugLogger(moduleName, functionKey, args, result) {
-  console.info(`${moduleName}.${functionKey}`)
+  console.debug(`WPMRawLog: ${moduleName}.${functionKey}`)
   if (!window._wpm_debugger_filters(moduleName, functionKey, args, result)) {
     const logStore = window._wpm_debugger_logStore
     if (!result) {
