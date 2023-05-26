@@ -11,6 +11,7 @@ const logStyle_end =
 window._wpm_debugger_logStore = []
 let cacheLogQueue = []
 export function debugLogger(moduleName, functionKey, args, result) {
+  console.info(`${moduleName}.${functionKey}`)
   if (!window._wpm_debugger_filters(moduleName, functionKey, args, result)) {
     const logStore = window._wpm_debugger_logStore
     if (!result) {
@@ -18,7 +19,7 @@ export function debugLogger(moduleName, functionKey, args, result) {
         `${moduleName}.${functionKey}`,
         `%c REQ::${moduleName}.${functionKey}() params:`,
         logStyle_mid,
-        args.length > 0 ? [...args] : '无',
+        args && args.length > 0 ? [...args] : '无',
         `reqTime::`,
         new Date().toLocaleString(),
       ])
