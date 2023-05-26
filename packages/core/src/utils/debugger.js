@@ -4,7 +4,7 @@ window._wpm_debugger_filters = () => {
 
 let wpmLoggerStore = null
 
-if (window.localStorage) {
+if (window.localforage) {
   wpmLoggerStore = window.localforage.createInstance({
     name: 'wpmLoggerStore',
   })
