@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.28.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.27.0...@wpm-js/core@0.28.0) (2023-06-27)
+
+
+### Features
+
+* **post:** support cross origin post message api ([b5ceaf9](https://github.com/wpm-js/wpmjs-core/commit/b5ceaf952af85767ff8d0386d482d9943183c609))
+
+
+
+
+
 # [0.27.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.26.0...@wpm-js/core@0.27.0) (2023-05-26)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/runtime@0.2.24...@wpm-js/runtime@0.3.0) (2023-06-27)
+
+
+### Features
+
+* **post:** support cross origin post message api ([b5ceaf9](https://github.com/wpm-js/wpmjs-core/commit/b5ceaf952af85767ff8d0386d482d9943183c609))
+
+
+
+
+
 ## [0.2.24](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/runtime@0.2.23...@wpm-js/runtime@0.2.24) (2023-05-26)
 
 **Note:** Version bump only for package @wpm-js/runtime

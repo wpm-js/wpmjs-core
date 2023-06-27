@@ -1,6 +1,6 @@
 {
   "name": "@wpm-js/core",
-  "version": "0.27.0",
+  "version": "0.28.0",
   "description": "wpm-js core api",
   "keywords": [
     "module",
@@ -32,9 +32,9 @@
     "deepmerge": "^4.2.2",
     "lodash.isplainobject": "^4.0.6",
     "lodash.mergewith": "^4.6.2",
+    "nanoid": "^4.0.2",
     "rxjs": "^7.4.0",
-    "validate-npm-package-name": "^3.0.0",
-    "nanoid": "^4.0.2"
+    "validate-npm-package-name": "^3.0.0"
   },
   "gitHead": "b71cea6c67d0104be8b1da077ac467cb6b4b0124"
 }
