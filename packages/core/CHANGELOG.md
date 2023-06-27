@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.28.1](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.28.0...@wpm-js/core@0.28.1) (2023-06-27)
+
+
+### Bug Fixes
+
+* **post:** cors error ([942a06e](https://github.com/wpm-js/wpmjs-core/commit/942a06e83d720665d7cb5f3518551692deb794ad))
+
+
+
+
+
 # [0.28.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.27.0...@wpm-js/core@0.28.0) (2023-06-27)
 
 
