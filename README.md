@@ -14,7 +14,7 @@ import wpm from '@wpm-js/core'
 
 function MyComponent() {}
 
-wpm.export('MyComponent', MyComponent)
+wpm.export('MyComponent', { default: MyComponent })
 ```
 
 - vite.config.js
