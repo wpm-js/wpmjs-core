@@ -40,7 +40,7 @@ export function createIframe({ domId, src }) {
   iframeAsyncSubject[domId] = new AsyncSubject()
   iframe.id = domId
   iframe.src = src
-  iframe.frameborder = '0'
+  iframe.frameBorder = '0'
   iframe.onload = () => {
     iframeOnLoadFlag[domId] = true
     iframeAsyncSubject[domId].complete()
@@ -60,7 +60,7 @@ export const post = (url, { data }) => {
     id,
   }
   if (domId === 'top') {
-    top.postMessage(payload, top.origin)
+    top.postMessage(payload, '*')
   } else {
     // 只匹配窗口为主窗口时候的逻辑
     const target = document.getElementById(domId)
@@ -68,16 +68,15 @@ export const post = (url, { data }) => {
       throw new Error(`${domId} is not exist`)
     }
     if (iframeOnLoadFlag[domId]) {
-      target.contentWindow.postMessage(payload, target.contentWindow.origin)
+      target.contentWindow.postMessage(payload, '*')
     } else {
       iframeAsyncSubject[domId].subscribe({
-        next({ payload, origin }) {
-          target.contentWindow.postMessage(payload, origin)
+        next({ payload }) {
+          target.contentWindow.postMessage(payload, '*')
         },
       })
       iframeAsyncSubject[domId].next({
         payload,
-        origin: target.contentWindow.origin,
       })
     }
   }
