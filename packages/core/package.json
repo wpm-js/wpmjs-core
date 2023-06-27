@@ -33,7 +33,8 @@
     "lodash.isplainobject": "^4.0.6",
     "lodash.mergewith": "^4.6.2",
     "rxjs": "^7.4.0",
-    "validate-npm-package-name": "^3.0.0"
+    "validate-npm-package-name": "^3.0.0",
+    "nanoid": "^4.0.2"
   },
   "gitHead": "b71cea6c67d0104be8b1da077ac467cb6b4b0124"
 }

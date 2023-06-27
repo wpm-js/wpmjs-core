@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../packages/umd-package/dist/dev.js"></script>
+  </head>
+  <body>
+    <script>
+      const post = window.$wpm_post$
+      const create = window.$wpm_create$
+      create({
+        name: 'sub',
+        exports: {
+          login(userData) {
+            console.debug(userData)
+          },
+        },
+      })
+      post('top/topApi/getAppId', { data: {} }).then((res) => {
+        console.debug(res)
+      })
+    </script>
+  </body>
+</html>

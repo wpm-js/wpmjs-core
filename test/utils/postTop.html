@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../packages/umd-package/dist/dev.js"></script>
+  </head>
+  <body>
+    <script>
+      const create = window.$wpm_create$
+      const post = window.$wpm_post$
+      const createIframe = window.$wpm_createIframe$
+      create({
+        name: 'topApi',
+        exports: {
+          getAppId(data, r) {
+            r('19386')
+          },
+        },
+      })
+      createIframe({
+        domId: 'post',
+        src: './post.html',
+      })
+      post('post/sub/login', { name: 'jacky', age: 16 })
+    </script>
+  </body>
+</html>
