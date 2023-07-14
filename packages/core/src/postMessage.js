@@ -11,6 +11,7 @@ import { inject } from './inject'
 const iframeOnLoadFlag = {}
 const iframeAsyncSubject = {}
 const postAsyncSubject = {}
+const windows = {}
 
 window.addEventListener('message', async (event) => {
   if (event.data.type === 'req') {
@@ -33,6 +34,19 @@ window.addEventListener('message', async (event) => {
     }
   }
 })
+
+export function openWin({ domId, src }) {
+  const winTarget = window.open(src)
+  iframeOnLoadFlag[domId] = false
+  if (iframeAsyncSubject[domId] === undefined) {
+    iframeAsyncSubject[domId] = new AsyncSubject()
+  }
+  windows[domId] = winTarget
+  winTarget.onload = () => {
+    iframeOnLoadFlag[domId] = true
+    iframeAsyncSubject[domId].complete()
+  }
+}
 
 export function createIframe({ domId, src }) {
   const iframe = document.createElement('iframe')
@@ -60,19 +74,37 @@ export const post = (url, { data }) => {
     id,
   }
   if (domId === 'top') {
-    top.postMessage(payload, '*')
+    if (window.opener) {
+      window.opener.postMessage(payload, '*')
+    } else {
+      top.postMessage(payload, '*')
+    }
   } else {
     // 只匹配窗口为主窗口时候的逻辑
-    const target = document.getElementById(domId)
-    if (target === null) {
+    let target = document.getElementById(domId)
+    if (target === null && windows[domId] === undefined) {
       throw new Error(`${domId} is not exist`)
     }
+    if (target === null) {
+      target = windows[domId]
+    }
     if (iframeOnLoadFlag[domId]) {
-      target.contentWindow.postMessage(payload, '*')
+      if (target.postMessage) {
+        target.postMessage(payload, '*')
+      } else {
+        target.contentWindow.postMessage(payload, '*')
+      }
     } else {
+      if (iframeAsyncSubject[domId] === undefined) {
+        iframeAsyncSubject[domId] = new AsyncSubject()
+      }
       iframeAsyncSubject[domId].subscribe({
         next({ payload }) {
-          target.contentWindow.postMessage(payload, '*')
+          if (target.postMessage) {
+            target.postMessage(payload, '*')
+          } else {
+            target.contentWindow.postMessage(payload, '*')
+          }
         },
       })
       iframeAsyncSubject[domId].next({

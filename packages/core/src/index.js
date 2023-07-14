@@ -1,6 +1,6 @@
 import { inject } from './inject'
 import { create } from './store/create'
-import { post, createIframe } from './postMessage'
+import { post, createIframe, openWin } from './postMessage'
 
 class WPMJS {
   constructor(config) {
@@ -48,5 +48,5 @@ class WPMJS {
     return moduleWrapper
   }
 }
-export { inject, create, post, createIframe }
+export { inject, create, post, createIframe, openWin }
 export default new WPMJS({})

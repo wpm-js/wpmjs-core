@@ -2,5 +2,6 @@
   "cSpell.words": [
     "namelist",
     "wpmjs"
-  ]
+  ],
+  "liveServer.settings.port": 5501
 }

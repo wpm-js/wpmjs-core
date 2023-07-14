@@ -13,8 +13,9 @@
       create({
         name: 'sub',
         exports: {
-          login(userData) {
+          login(userData, r) {
             console.debug(userData)
+            r(userData)
           },
         },
       })
