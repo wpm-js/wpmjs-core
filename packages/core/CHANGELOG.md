@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.29.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.28.1...@wpm-js/core@0.29.0) (2023-07-14)
+
+
+### Features
+
+* **post:** 调整 post api 支持 window.open 多窗口通信 ([72664d8](https://github.com/wpm-js/wpmjs-core/commit/72664d8e9f468cf0baadfc95f5c3e37d40486dcc))
+
+
+
+
+
 ## [0.28.1](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.28.0...@wpm-js/core@0.28.1) (2023-06-27)
 
 
