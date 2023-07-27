@@ -30,7 +30,6 @@ window.addEventListener('message', async (event) => {
     if (event.target.location.href === window.location.href) {
       postAsyncSubject[id].next(data)
       postAsyncSubject[id].complete()
-      postAsyncSubject[id] = null
     }
   }
 })
