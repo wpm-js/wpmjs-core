@@ -47,7 +47,7 @@ export function openWin({ domId, src }) {
   }
 }
 
-export function createIframe({ domId, src }) {
+export function createIframe({ domId, src, element }) {
   const iframe = document.createElement('iframe')
   iframeOnLoadFlag[domId] = false
   iframeAsyncSubject[domId] = new AsyncSubject()
@@ -58,7 +58,11 @@ export function createIframe({ domId, src }) {
     iframeOnLoadFlag[domId] = true
     iframeAsyncSubject[domId].complete()
   }
-  document.body.appendChild(iframe)
+  if (element) {
+    element.appendChild(iframe)
+  } else {
+    document.body.appendChild(iframe)
+  }
 }
 
 export const post = (url, { data }) => {
