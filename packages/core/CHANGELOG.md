@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.30.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.29.1...@wpm-js/core@0.30.0) (2023-08-08)
+
+
+### Features
+
+* **post:** createIframe 支持插入指定 dom ([c93971b](https://github.com/wpm-js/wpmjs-core/commit/c93971bbd2c43da2e0cfeed226e60be2c21c64ae))
+
+
+
+
+
 ## [0.29.1](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.29.0...@wpm-js/core@0.29.1) (2023-07-27)
 
 
