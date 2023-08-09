@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.30.1](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.30.0...@wpm-js/core@0.30.1) (2023-08-09)
+
+
+### Bug Fixes
+
+* **post:** 调用 createIframe 的时候需要检查是否已经创建 ([5820df5](https://github.com/wpm-js/wpmjs-core/commit/5820df5b6959f2972bb36c806538ded9af568454))
+
+
+
+
+
 # [0.30.0](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.29.1...@wpm-js/core@0.30.0) (2023-08-08)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@wpm-js/core",
-  "version": "0.30.0",
+  "version": "0.30.1",
   "description": "wpm-js core api",
   "keywords": [
     "module",
