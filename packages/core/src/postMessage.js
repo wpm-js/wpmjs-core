@@ -58,10 +58,12 @@ export function createIframe({ domId, src, element }) {
     iframeOnLoadFlag[domId] = true
     iframeAsyncSubject[domId].complete()
   }
-  if (element) {
-    element.appendChild(iframe)
-  } else {
-    document.body.appendChild(iframe)
+  if (document.getElementById(domId) === null) {
+    if (element) {
+      element.appendChild(iframe)
+    } else {
+      document.body.appendChild(iframe)
+    }
   }
 }
 
