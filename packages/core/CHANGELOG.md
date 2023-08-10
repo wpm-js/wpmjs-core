@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.30.2](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.30.1...@wpm-js/core@0.30.2) (2023-08-10)
+
+
+### Bug Fixes
+
+* **post:** 没有正确处理并发 post ([f234374](https://github.com/wpm-js/wpmjs-core/commit/f23437483fb50f1d4f61a1c71897c6bd0109e168))
+
+
+
+
+
 ## [0.30.1](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.30.0...@wpm-js/core@0.30.1) (2023-08-09)
 
 
