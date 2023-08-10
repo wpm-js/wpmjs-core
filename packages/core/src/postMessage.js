@@ -38,25 +38,29 @@ export function openWin({ domId, src }) {
   const winTarget = window.open(src)
   iframeOnLoadFlag[domId] = false
   if (iframeAsyncSubject[domId] === undefined) {
-    iframeAsyncSubject[domId] = new AsyncSubject()
+    iframeAsyncSubject[domId] = []
   }
   windows[domId] = winTarget
   winTarget.onload = () => {
     iframeOnLoadFlag[domId] = true
-    iframeAsyncSubject[domId].complete()
+    iframeAsyncSubject[domId].forEach((as) => {
+      as.complete()
+    })
   }
 }
 
 export function createIframe({ domId, src, element }) {
   const iframe = document.createElement('iframe')
   iframeOnLoadFlag[domId] = false
-  iframeAsyncSubject[domId] = new AsyncSubject()
+  iframeAsyncSubject[domId] = []
   iframe.id = domId
   iframe.src = src
   iframe.frameBorder = '0'
   iframe.onload = () => {
     iframeOnLoadFlag[domId] = true
-    iframeAsyncSubject[domId].complete()
+    iframeAsyncSubject[domId].forEach((as) => {
+      as.complete()
+    })
   }
   if (document.getElementById(domId) === null) {
     if (element) {
@@ -101,9 +105,11 @@ export const post = (url, { data }) => {
       }
     } else {
       if (iframeAsyncSubject[domId] === undefined) {
-        iframeAsyncSubject[domId] = new AsyncSubject()
+        iframeAsyncSubject[domId] = []
       }
-      iframeAsyncSubject[domId].subscribe({
+      const as = new AsyncSubject()
+      iframeAsyncSubject[domId].push(as)
+      as.subscribe({
         next({ payload }) {
           if (target.postMessage) {
             target.postMessage(payload, '*')
@@ -112,8 +118,8 @@ export const post = (url, { data }) => {
           }
         },
       })
-      iframeAsyncSubject[domId].next({
-        payload,
+      as.next({
+        payload: { ...payload },
       })
     }
   }

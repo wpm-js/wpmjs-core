@@ -23,7 +23,8 @@
           domId: 'postWin',
           src: './post.html',
         })
-        post('postWin/sub/login', { name: 'jacky', age: 16 })
+        post('postWin/sub/login1', { data: 'ann' })
+        post('postWin/sub/login2', { data: 'hello' })
       }
       create({
         name: 'topApi',
@@ -37,7 +38,8 @@
         domId: 'post',
         src: './post.html',
       })
-      post('post/sub/login', { name: 'jacky', age: 16 })
+      post('post/sub/login1', { name: 'jacky1', age: 16 })
+      post('post/sub/login2', { name: 'jacky2', age: 16 })
     </script>
   </body>
 </html>
