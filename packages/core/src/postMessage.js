@@ -14,7 +14,7 @@ const postAsyncSubject = {}
 const windows = {}
 
 window.addEventListener('message', async (event) => {
-  if (event.data.type === 'req') {
+  if (event?.data?.type === 'req') {
     const { module, api, id, data = {} } = event.data
     if (event.target.location.href === window.location.href) {
       const res = await inject(module)[api](data)
@@ -25,7 +25,7 @@ window.addEventListener('message', async (event) => {
       })
     }
   }
-  if (event.data.type === 'res') {
+  if (event?.data?.type === 'res') {
     const { id, data } = event.data
     if (event.target.location.href === window.location.href) {
       postAsyncSubject[id].next(data)
