@@ -18,11 +18,14 @@ window.addEventListener('message', async (event) => {
     const { module, api, id, data = {} } = event.data
     if (event.target.location.href === window.location.href) {
       const res = await inject(module)[api](data)
-      event.source.postMessage({
-        type: 'res',
-        data: res,
-        id,
-      })
+      event.source.postMessage(
+        {
+          type: 'res',
+          data: res,
+          id,
+        },
+        event.origin
+      )
     }
   }
   if (event?.data?.type === 'res') {
@@ -71,7 +74,7 @@ export function createIframe({ domId, src, element }) {
   }
 }
 
-export const post = (url, { data }) => {
+export const post = (url, { data = {} }) => {
   const [domId, module, api] = url.split('/')
   const id = nanoid()
   postAsyncSubject[id] = new AsyncSubject()
