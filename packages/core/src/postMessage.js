@@ -12,6 +12,7 @@ const iframeOnLoadFlag = {}
 const iframeAsyncSubject = {}
 const postAsyncSubject = {}
 const windows = {}
+const iframeCache = {}
 
 window.addEventListener('message', async (event) => {
   if (event?.data?.type === 'req') {
@@ -74,7 +75,8 @@ export function createIframe({ domId, src, element }) {
   }
 }
 
-export const post = (url, { data = {} }) => {
+export const post = (url, meta = { data: {} }) => {
+  const { data } = meta
   const [domId, module, api] = url.split('/')
   const id = nanoid()
   postAsyncSubject[id] = new AsyncSubject()
