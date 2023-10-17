@@ -2,6 +2,7 @@ import { BehaviorSubject, ReplaySubject } from 'rxjs'
 import packageJSON from '../../package.json'
 
 let combination = {
+  loadJsList: new Map(),
   version: packageJSON.version,
   components: {},
   notificationSubjects: {},

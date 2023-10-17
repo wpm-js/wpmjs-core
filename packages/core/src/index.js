@@ -1,15 +1,21 @@
 import { inject } from './inject'
 import { create } from './store/create'
 import { post, createIframe, openWin } from './postMessage'
+import { combination } from './store/combination'
 
 class WPMJS {
   constructor(config) {
     this.config = config
   }
   loadJS(url) {
-    const script = document.createElement('script')
-    script.src = url
-    document.head.appendChild(script)
+    if (combination.loadJsList.has(url)) {
+      return
+    } else {
+      combination.loadJsList.set(url, true)
+      const script = document.createElement('script')
+      script.src = url
+      document.head.appendChild(script)
+    }
   }
   loadCSS(url) {
     const link = document.createElement('link')
