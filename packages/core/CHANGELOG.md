@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.30.7](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.30.6...@wpm-js/core@0.30.7) (2023-10-18)
+
+
+### Bug Fixes
+
+* **load:** 避免重复还在相同的 js ([ece5925](https://github.com/wpm-js/wpmjs-core/commit/ece5925dc1b30c64319bcf456d4d49ba0d8e116f))
+
+
+
+
+
 ## [0.30.6](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.30.5...@wpm-js/core@0.30.6) (2023-10-17)
 
 
