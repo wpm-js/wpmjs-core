@@ -39,8 +39,7 @@
   "peerDependencies": {
     "@babel/runtime": "^7.12.1",
     "react": "^16.8.3 || ^17",
-    "rxjs": "^7.4.0",
-    "lodash.debounce": "*"
+    "rxjs": "^7.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
