@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.30.8](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.30.7...@wpm-js/core@0.30.8) (2023-10-18)
+
+
+### Bug Fixes
+
+* **ver:** remove dep ([4b4c1c2](https://github.com/wpm-js/wpmjs-core/commit/4b4c1c2cf5a8d609e3be4c6bac0a5da27b81578d))
+
+
+
+
+
 ## [0.30.7](https://github.com/wpm-js/wpmjs-core/compare/@wpm-js/core@0.30.6...@wpm-js/core@0.30.7) (2023-10-18)
 
 
