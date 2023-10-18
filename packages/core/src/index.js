@@ -8,6 +8,9 @@ class WPMJS {
     this.config = config
   }
   loadJS(url) {
+    if (!combination.loadJsList) {
+      combination.loadJsList = new Map()
+    }
     if (combination.loadJsList.has(url)) {
       return
     } else {

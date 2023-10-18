@@ -2,6 +2,7 @@
 import { invoke } from './invoke'
 import { mock } from './mock'
 import { debugLogger } from './utils/debugger'
+import debounce from 'lodash.debounce'
 // This function is used to create a proxy object that intercepts function calls made on it.
 // It takes in a moduleName parameter and returns a new proxy object.
 
